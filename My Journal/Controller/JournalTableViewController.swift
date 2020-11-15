@@ -21,8 +21,12 @@ class JournalTableViewController: UITableViewController {
      
      override func viewWillAppear(_ animated: Bool) {
          do {
-             let savedEntries = try context.fetch(Entry.fetchRequest()) as! [Entry]
-             entries = savedEntries
+            //must declare the data type as an array of Entry entities
+            let request: NSFetchRequest<Entry> = Entry.fetchRequest()
+            //set to false means the most recent date entry will be listed first in the journal table view controller
+            request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+            let savedEntries = try context.fetch(request)
+            entries = savedEntries
             tableView.reloadData()
              
          } catch {
