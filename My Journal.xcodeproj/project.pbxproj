@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		5F9B5A7C2560E9060038173C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B5A7B2560E9060038173C /* AppDelegate.swift */; };
 		5F9B5A7E2560E9060038173C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B5A7D2560E9060038173C /* SceneDelegate.swift */; };
-		5F9B5A802560E9060038173C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B5A7F2560E9060038173C /* ViewController.swift */; };
 		5F9B5A832560E9060038173C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F9B5A812560E9060038173C /* Main.storyboard */; };
 		5F9B5A862560E9060038173C /* My_Journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B5A842560E9060038173C /* My_Journal.xcdatamodeld */; };
 		5F9B5A882560E9090038173C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F9B5A872560E9090038173C /* Assets.xcassets */; };
 		5F9B5A8B2560E9090038173C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F9B5A892560E9090038173C /* LaunchScreen.storyboard */; };
 		5F9B5A962560E9090038173C /* My_JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B5A952560E9090038173C /* My_JournalTests.swift */; };
 		5F9B5AA12560E9090038173C /* My_JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B5AA02560E9090038173C /* My_JournalUITests.swift */; };
+		5F9B5AB52560EB140038173C /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B5AB42560EB140038173C /* JournalTableViewController.swift */; };
+		5F9B5ABA2560EC450038173C /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B5AB92560EC450038173C /* EntryViewController.swift */; };
+		5FE0BE5F25610F6B007C621A /* Entry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE0BE5D25610F6B007C621A /* Entry+CoreDataClass.swift */; };
+		5FE0BE6025610F6B007C621A /* Entry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE0BE5E25610F6B007C621A /* Entry+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,6 @@
 		5F9B5A782560E9060038173C /* My Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F9B5A7B2560E9060038173C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F9B5A7D2560E9060038173C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5F9B5A7F2560E9060038173C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5F9B5A822560E9060038173C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F9B5A852560E9060038173C /* My_Journal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_Journal.xcdatamodel; sourceTree = "<group>"; };
 		5F9B5A872560E9090038173C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		5F9B5A9C2560E9090038173C /* My JournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My JournalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F9B5AA02560E9090038173C /* My_JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_JournalUITests.swift; sourceTree = "<group>"; };
 		5F9B5AA22560E9090038173C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F9B5AB42560EB140038173C /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
+		5F9B5AB92560EC450038173C /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		5FE0BE5D25610F6B007C621A /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5FE0BE5E25610F6B007C621A /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F05F7142560F87500A47F4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F9B5A812560E9060038173C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F05F7152560F88300A47F4B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F9B5AB42560EB140038173C /* JournalTableViewController.swift */,
+				5F9B5AB92560EC450038173C /* EntryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5F18E2B325613D7A0060496D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F9B5A7B2560E9060038173C /* AppDelegate.swift */,
+				5F9B5A7D2560E9060038173C /* SceneDelegate.swift */,
+				5F9B5A892560E9090038173C /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F18E2B725613E930060496D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FE0BE5D25610F6B007C621A /* Entry+CoreDataClass.swift */,
+				5FE0BE5E25610F6B007C621A /* Entry+CoreDataProperties.swift */,
+				5F9B5A842560E9060038173C /* My_Journal.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5F9B5A6F2560E9060038173C = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +144,12 @@
 		5F9B5A7A2560E9060038173C /* My Journal */ = {
 			isa = PBXGroup;
 			children = (
-				5F9B5A7B2560E9060038173C /* AppDelegate.swift */,
-				5F9B5A7D2560E9060038173C /* SceneDelegate.swift */,
-				5F9B5A7F2560E9060038173C /* ViewController.swift */,
-				5F9B5A812560E9060038173C /* Main.storyboard */,
+				5F18E2B725613E930060496D /* Model */,
+				5F05F7142560F87500A47F4B /* View */,
+				5F05F7152560F88300A47F4B /* Controller */,
 				5F9B5A872560E9090038173C /* Assets.xcassets */,
-				5F9B5A892560E9090038173C /* LaunchScreen.storyboard */,
 				5F9B5A8C2560E9090038173C /* Info.plist */,
-				5F9B5A842560E9060038173C /* My_Journal.xcdatamodeld */,
+				5F18E2B325613D7A0060496D /* Supporting Files */,
 			);
 			path = "My Journal";
 			sourceTree = "<group>";
@@ -261,9 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F9B5A802560E9060038173C /* ViewController.swift in Sources */,
 				5F9B5A7C2560E9060038173C /* AppDelegate.swift in Sources */,
+				5F9B5ABA2560EC450038173C /* EntryViewController.swift in Sources */,
+				5FE0BE5F25610F6B007C621A /* Entry+CoreDataClass.swift in Sources */,
 				5F9B5A7E2560E9060038173C /* SceneDelegate.swift in Sources */,
+				5F9B5AB52560EB140038173C /* JournalTableViewController.swift in Sources */,
+				5FE0BE6025610F6B007C621A /* Entry+CoreDataProperties.swift in Sources */,
 				5F9B5A862560E9060038173C /* My_Journal.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  My Journal
-//
-//  Created by Erin Scully on 11/14/20.
-//
 
 import UIKit
 import CoreData
@@ -14,7 +8,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let container = NSPersistentContainer(name: "My_Journal")
+         print(container.persistentStoreDescriptions.first?.url)
         return true
     }
 

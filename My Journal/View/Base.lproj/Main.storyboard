@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="God-Fh-44T">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Daily Journal-->
+        <scene sceneID="wwP-DQ-Cwl">
+            <objects>
+                <tableViewController id="AHl-q7-lPC" customClass="JournalTableViewController" customModule="My_Journal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="75" estimatedRowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q7M-CC-oG4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexColor" red="0.29085952040000002" green="0.20994566379999999" blue="0.14615128929999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="JournalCell" rowHeight="75" id="hFy-IB-JGk">
+                                <rect key="frame" x="0.0" y="28" width="414" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hFy-IB-JGk" id="Htl-MK-bea">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AHl-q7-lPC" id="iU4-al-dQO"/>
+                            <outlet property="delegate" destination="AHl-q7-lPC" id="uFB-pr-845"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Daily Journal" id="wiq-6u-x0w">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="0CG-LE-ca5"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil.tip.crop.circle.badge.plus" catalog="system" id="WuT-hy-gOW">
+                            <color key="tintColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="mbb-JY-rGV" kind="show" identifier="journalEntrySegue" id="Ly9-kH-T3I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ca-i3-0AF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2957" y="-293"/>
+        </scene>
+        <!--Entry View Controller-->
+        <scene sceneID="t1T-hY-hrw">
+            <objects>
+                <viewController id="mbb-JY-rGV" customClass="EntryViewController" customModule="My_Journal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lPn-pm-4cD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="mOz-zJ-bl5">
+                                <rect key="frame" x="20" y="88" width="374" height="236"/>
+                                <color key="tintColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="mbb-JY-rGV" eventType="valueChanged" id="Ehf-eQ-OoL"/>
+                                </connections>
+                            </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K6I-xj-bss">
+                                <rect key="frame" x="20" y="344" width="374" height="538"/>
+                                <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.29085952040000002" green="0.20994566379999999" blue="0.14615128929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="79L-7N-Reg"/>
+                        <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="79L-7N-Reg" firstAttribute="trailing" secondItem="K6I-xj-bss" secondAttribute="trailing" constant="20" id="DEK-lu-JCp"/>
+                            <constraint firstItem="K6I-xj-bss" firstAttribute="bottom" secondItem="79L-7N-Reg" secondAttribute="bottom" constant="20" id="KaP-by-CJQ"/>
+                            <constraint firstItem="mOz-zJ-bl5" firstAttribute="top" secondItem="79L-7N-Reg" secondAttribute="top" id="MVE-ti-nPn"/>
+                            <constraint firstItem="mOz-zJ-bl5" firstAttribute="leading" secondItem="79L-7N-Reg" secondAttribute="leading" constant="20" id="RS9-Nc-rPa"/>
+                            <constraint firstItem="K6I-xj-bss" firstAttribute="leading" secondItem="79L-7N-Reg" secondAttribute="leading" constant="20" id="cvG-Lh-rgJ"/>
+                            <constraint firstItem="79L-7N-Reg" firstAttribute="bottom" secondItem="mOz-zJ-bl5" secondAttribute="bottom" constant="538" id="iAc-VU-9rT"/>
+                            <constraint firstItem="mOz-zJ-bl5" firstAttribute="trailing" secondItem="79L-7N-Reg" secondAttribute="trailing" constant="-20" id="rbJ-ng-cK8"/>
+                            <constraint firstItem="mOz-zJ-bl5" firstAttribute="top" secondItem="79L-7N-Reg" secondAttribute="top" id="szD-yf-grB"/>
+                            <constraint firstItem="mOz-zJ-bl5" firstAttribute="centerX" secondItem="lPn-pm-4cD" secondAttribute="centerX" id="uMe-f4-5Kc"/>
+                            <constraint firstItem="K6I-xj-bss" firstAttribute="top" secondItem="mOz-zJ-bl5" secondAttribute="bottom" constant="20" id="v4m-GB-t0r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hvg-0J-yy3">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="WYM-f6-ylh">
+                            <color key="tintColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash.fill" catalog="system" id="WaC-hh-E0V">
+                            <color key="tintColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="deleteButtonPressed:" destination="mbb-JY-rGV" id="h4l-vF-JBK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="mOz-zJ-bl5" id="K7E-Uh-Qc3"/>
+                        <outlet property="entryTextView" destination="K6I-xj-bss" id="hta-1T-MIJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1Q-xT-U2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1835" y="-305"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wLI-qD-82v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="God-Fh-44T" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fPT-UQ-4ht">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.56465393304824829" green="0.45339596271514893" blue="0.35711643099784851" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AHl-q7-lPC" kind="relationship" relationship="rootViewController" id="PSs-Kf-v0O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9B-Wh-5Xo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3755" y="-300"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil.tip.crop.circle.badge.plus" catalog="system" width="128" height="108"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
+    </resources>
+</document>
