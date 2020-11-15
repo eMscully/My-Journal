@@ -5,8 +5,8 @@ import CoreData
 class JournalTableViewController: UITableViewController {
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
   
-    var entryTitle = ""
-    var entryDate = Date()
+ //   var entryTitle = ""
+   // var entryDate = Date()
     var entries: [Entry] = []
     
 
@@ -42,7 +42,9 @@ class JournalTableViewController: UITableViewController {
        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "JournalCell") as? JournalCell {
         let entry = entries[indexPath.row]
-            cell.previewLabel.text = entry.text
+        cell.previewLabel.text = entry.text
+        cell.monthLabel.text = entry.month()
+            cell.dayLabel.text = entry.day()
         cell.backgroundColor = #colorLiteral(red: 0.9382581115, green: 0.8733785748, blue: 0.684623003, alpha: 1)
         return cell
         } else {

@@ -32,7 +32,7 @@ class EntryViewController: UIViewController, UITextViewDelegate {
        
         if entry == nil {
             entry = Entry(context: context)
-            entry?.text = entryTextView.text
+            entry?.text = "Today was..."
             entry?.date = datePicker.date
         }
            entryTextView.text = entry?.text
