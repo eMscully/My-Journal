@@ -1,0 +1,30 @@
+.DS_Store
+
+## XCODE USER SETTINGS ------->
+			# + + + +
+				xcuserdata/
+
+## OBJ-C/SWIFT SPECIFIC ------->
+			# + + + +
+				*.hmap
+
+## APP PACKAGING --------->
+			# + + + +
+				*.ipa
+				*.dSYM.zip
+				*.dSYM
+
+## PLAYGROUNDS -------->
+			# + + + +
+				timeline.xctimeline
+				playground.xcworkspace
+
+				# + + + +
+					.build/
+
+
+
+
+## CODE INJECTION --------> After new code Injection tools there's a generated folder /#iOSInjectionProject:
+				# + + + +
+					iOSInjectionProject/
