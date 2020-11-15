@@ -29,9 +29,7 @@ class JournalTableViewController: UITableViewController {
              print("Error loading data: \(error.localizedDescription)")
          }
      }
-     
-     
-     
+
 
     // MARK: - Table view data source
 
@@ -42,12 +40,14 @@ class JournalTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-
-        let cell = UITableViewCell()
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "JournalCell") as? JournalCell {
         let entry = entries[indexPath.row]
-        cell.textLabel?.text = entry.text
+            cell.previewLabel.text = entry.text
         cell.backgroundColor = #colorLiteral(red: 0.9382581115, green: 0.8733785748, blue: 0.684623003, alpha: 1)
         return cell
+        } else {
+        return UITableViewCell()
+    }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

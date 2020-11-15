@@ -8,8 +8,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let container = NSPersistentContainer(name: "My_Journal")
-         print(container.persistentStoreDescriptions.first?.url)
+//        let container = NSPersistentContainer(name: "My_Journal")
+//         print(container.persistentStoreDescriptions.first?.url)
         return true
     }
 

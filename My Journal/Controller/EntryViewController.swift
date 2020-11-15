@@ -8,12 +8,22 @@ class EntryViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var entryTextView: UITextView!
     
+    @IBOutlet weak var bottomTextViewConstraint: NSLayoutConstraint!
+    
+    
     var entry: Entry?
     
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //MARK: - Creating a notification center object that tells whether keyboard is on screen or not
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
         
         entryTextView.becomeFirstResponder()
 
@@ -31,6 +41,17 @@ class EntryViewController: UIViewController, UITextViewDelegate {
             
         }
         
+    }
+    
+    //MARK: - Keyboard notification selector function that returns the height of the keyboard on a user's device model 
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardFrame: NSValue =
+            notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            
+            bottomTextViewConstraint.constant = keyboardHeight
+        }
     }
 
     @IBAction func datePickerChanged(_ sender: Any) {

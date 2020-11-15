@@ -17,6 +17,7 @@
 		5F9B5AA12560E9090038173C /* My_JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B5AA02560E9090038173C /* My_JournalUITests.swift */; };
 		5F9B5AB52560EB140038173C /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B5AB42560EB140038173C /* JournalTableViewController.swift */; };
 		5F9B5ABA2560EC450038173C /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9B5AB92560EC450038173C /* EntryViewController.swift */; };
+		5FA12BF02561881F0063C91C /* JournalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA12BEF2561881F0063C91C /* JournalCell.swift */; };
 		5FE0BE5F25610F6B007C621A /* Entry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE0BE5D25610F6B007C621A /* Entry+CoreDataClass.swift */; };
 		5FE0BE6025610F6B007C621A /* Entry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE0BE5E25610F6B007C621A /* Entry+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		5F9B5AA22560E9090038173C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F9B5AB42560EB140038173C /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
 		5F9B5AB92560EC450038173C /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		5FA12BEF2561881F0063C91C /* JournalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCell.swift; sourceTree = "<group>"; };
 		5FE0BE5D25610F6B007C621A /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5FE0BE5E25610F6B007C621A /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 		5F05F7142560F87500A47F4B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5FA12BEF2561881F0063C91C /* JournalCell.swift */,
 				5F9B5A812560E9060038173C /* Main.storyboard */,
 			);
 			path = View;
@@ -309,6 +312,7 @@
 				5F9B5AB52560EB140038173C /* JournalTableViewController.swift in Sources */,
 				5FE0BE6025610F6B007C621A /* Entry+CoreDataProperties.swift in Sources */,
 				5F9B5A862560E9060038173C /* My_Journal.xcdatamodeld in Sources */,
+				5FA12BF02561881F0063C91C /* JournalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

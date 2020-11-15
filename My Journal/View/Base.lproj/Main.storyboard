@@ -11,7 +11,7 @@
         <scene sceneID="wwP-DQ-Cwl">
             <objects>
                 <tableViewController id="AHl-q7-lPC" customClass="JournalTableViewController" customModule="My_Journal" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="75" estimatedRowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q7M-CC-oG4">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q7M-CC-oG4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -19,15 +19,53 @@
                         <color key="sectionIndexColor" red="0.29085952040000002" green="0.20994566379999999" blue="0.14615128929999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="JournalCell" rowHeight="75" id="hFy-IB-JGk">
-                                <rect key="frame" x="0.0" y="28" width="414" height="75"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="JournalCell" rowHeight="100" id="hFy-IB-JGk" customClass="JournalCell" customModule="My_Journal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hFy-IB-JGk" id="Htl-MK-bea">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEPT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3A-7A-iaJ">
+                                            <rect key="frame" x="20" y="11" width="80" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Mks-iB-utd"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <color key="textColor" red="0.29085952040000002" green="0.20994566379999999" blue="0.14615128929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqX-qS-VVW">
+                                            <rect key="frame" x="42" y="48" width="36.5" height="41"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                            <color key="textColor" red="0.78738981490000004" green="0.2464441359" blue="0.27221894260000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLV-W8-2fa">
+                                            <rect key="frame" x="110" y="0.0" width="41.5" height="100"/>
+                                            <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                            <color key="textColor" red="0.78738981490000004" green="0.2464441359" blue="0.27221894260000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="SqX-qS-VVW" firstAttribute="centerX" secondItem="f3A-7A-iaJ" secondAttribute="centerX" id="0VR-5p-rsD"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="aLV-W8-2fa" secondAttribute="trailingMargin" id="BJV-ud-RiH"/>
+                                        <constraint firstAttribute="bottom" secondItem="aLV-W8-2fa" secondAttribute="bottom" id="BuW-nr-1pg"/>
+                                        <constraint firstItem="f3A-7A-iaJ" firstAttribute="leading" secondItem="Htl-MK-bea" secondAttribute="leadingMargin" id="ESe-Lr-QLW"/>
+                                        <constraint firstItem="f3A-7A-iaJ" firstAttribute="top" secondItem="Htl-MK-bea" secondAttribute="topMargin" id="VUh-Kw-7zE"/>
+                                        <constraint firstItem="aLV-W8-2fa" firstAttribute="top" secondItem="Htl-MK-bea" secondAttribute="top" id="i8s-5C-10m"/>
+                                        <constraint firstItem="aLV-W8-2fa" firstAttribute="leading" secondItem="f3A-7A-iaJ" secondAttribute="trailing" constant="10" id="rNj-as-NmN"/>
+                                        <constraint firstItem="SqX-qS-VVW" firstAttribute="bottom" secondItem="Htl-MK-bea" secondAttribute="bottomMargin" id="teY-ls-tGO"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dayLabel" destination="SqX-qS-VVW" id="esH-sT-AFN"/>
+                                    <outlet property="monthLabel" destination="f3A-7A-iaJ" id="NB7-MK-mDz"/>
+                                    <outlet property="previewLabel" destination="aLV-W8-2fa" id="d5Z-XW-4Ed"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -47,44 +85,41 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ca-i3-0AF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2957" y="-293"/>
+            <point key="canvasLocation" x="-3007.2463768115945" y="-675"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="t1T-hY-hrw">
             <objects>
-                <viewController id="mbb-JY-rGV" customClass="EntryViewController" customModule="My_Journal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mbb-JY-rGV" customClass="EntryViewController" customModule="My_Journal" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lPn-pm-4cD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="mOz-zJ-bl5">
-                                <rect key="frame" x="20" y="88" width="374" height="236"/>
-                                <color key="tintColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="datePickerChanged:" destination="mbb-JY-rGV" eventType="valueChanged" id="Ehf-eQ-OoL"/>
-                                </connections>
-                            </datePicker>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K6I-xj-bss">
-                                <rect key="frame" x="20" y="344" width="374" height="538"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z8e-nY-YSL">
+                                <rect key="frame" x="0.0" y="193" width="414" height="663"/>
                                 <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" red="0.29085952040000002" green="0.20994566379999999" blue="0.14615128929999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="luM-fT-WGs">
+                                <rect key="frame" x="47" y="98" width="320" height="75"/>
+                                <color key="tintColor" red="0.78738981490000004" green="0.2464441359" blue="0.27221894260000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="HgL-hp-Cz0"/>
+                                </constraints>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="79L-7N-Reg"/>
                         <color key="backgroundColor" red="0.92120724919999997" green="0.84832113980000001" blue="0.62377804520000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="79L-7N-Reg" firstAttribute="trailing" secondItem="K6I-xj-bss" secondAttribute="trailing" constant="20" id="DEK-lu-JCp"/>
-                            <constraint firstItem="K6I-xj-bss" firstAttribute="bottom" secondItem="79L-7N-Reg" secondAttribute="bottom" constant="20" id="KaP-by-CJQ"/>
-                            <constraint firstItem="mOz-zJ-bl5" firstAttribute="top" secondItem="79L-7N-Reg" secondAttribute="top" id="MVE-ti-nPn"/>
-                            <constraint firstItem="mOz-zJ-bl5" firstAttribute="leading" secondItem="79L-7N-Reg" secondAttribute="leading" constant="20" id="RS9-Nc-rPa"/>
-                            <constraint firstItem="K6I-xj-bss" firstAttribute="leading" secondItem="79L-7N-Reg" secondAttribute="leading" constant="20" id="cvG-Lh-rgJ"/>
-                            <constraint firstItem="79L-7N-Reg" firstAttribute="bottom" secondItem="mOz-zJ-bl5" secondAttribute="bottom" constant="538" id="iAc-VU-9rT"/>
-                            <constraint firstItem="mOz-zJ-bl5" firstAttribute="trailing" secondItem="79L-7N-Reg" secondAttribute="trailing" constant="-20" id="rbJ-ng-cK8"/>
-                            <constraint firstItem="mOz-zJ-bl5" firstAttribute="top" secondItem="79L-7N-Reg" secondAttribute="top" id="szD-yf-grB"/>
-                            <constraint firstItem="mOz-zJ-bl5" firstAttribute="centerX" secondItem="lPn-pm-4cD" secondAttribute="centerX" id="uMe-f4-5Kc"/>
-                            <constraint firstItem="K6I-xj-bss" firstAttribute="top" secondItem="mOz-zJ-bl5" secondAttribute="bottom" constant="20" id="v4m-GB-t0r"/>
+                            <constraint firstItem="z8e-nY-YSL" firstAttribute="leading" secondItem="lPn-pm-4cD" secondAttribute="leading" id="6ft-yD-gFN"/>
+                            <constraint firstItem="z8e-nY-YSL" firstAttribute="top" secondItem="luM-fT-WGs" secondAttribute="bottom" constant="20" id="MBe-PX-BXx"/>
+                            <constraint firstAttribute="trailing" secondItem="z8e-nY-YSL" secondAttribute="trailing" id="dJN-c6-tQf"/>
+                            <constraint firstItem="luM-fT-WGs" firstAttribute="centerX" secondItem="z8e-nY-YSL" secondAttribute="centerX" id="jh3-Nd-XLd"/>
+                            <constraint firstItem="79L-7N-Reg" firstAttribute="bottom" secondItem="z8e-nY-YSL" secondAttribute="bottom" constant="6" id="otL-Bo-qRp"/>
+                            <constraint firstItem="luM-fT-WGs" firstAttribute="top" secondItem="79L-7N-Reg" secondAttribute="top" constant="10" id="s6J-hn-9zz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hvg-0J-yy3">
@@ -99,13 +134,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="datePicker" destination="mOz-zJ-bl5" id="K7E-Uh-Qc3"/>
-                        <outlet property="entryTextView" destination="K6I-xj-bss" id="hta-1T-MIJ"/>
+                        <outlet property="bottomTextViewConstraint" destination="otL-Bo-qRp" id="Pi6-CI-oHO"/>
+                        <outlet property="datePicker" destination="luM-fT-WGs" id="Xkx-br-TZA"/>
+                        <outlet property="entryTextView" destination="z8e-nY-YSL" id="bAv-oe-l6I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1Q-xT-U2c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1835" y="-305"/>
+            <point key="canvasLocation" x="-2314.4927536231885" y="-675"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wLI-qD-82v">
@@ -128,7 +164,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t9B-Wh-5Xo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3755" y="-300"/>
+            <point key="canvasLocation" x="-3710" y="-675"/>
         </scene>
     </scenes>
     <resources>
